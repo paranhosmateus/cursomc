@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.mateusparanhos.cursomc.domain.Cidade;
 import com.mateusparanhos.cursomc.domain.Cliente;
@@ -58,7 +59,7 @@ public class ClienteService {
 		}
 	
 		catch (DataIntegrityViolationException e) {
-			throw new  DataIntegrityException("Não é possivel excluir porque h");
+			throw new  DataIntegrityException("Não é possivel exclui porque há pedidos relacionados");
 		}
 	}
 	
