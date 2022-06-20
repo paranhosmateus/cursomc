@@ -62,6 +62,7 @@ public class DBService {
 		Categoria cat6 = new Categoria(null, "Decoracao");
 		Categoria cat7 = new Categoria(null, "Perfumaria");
 		
+		
 
 
 		
